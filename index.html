@@ -15,17 +15,22 @@
                     <span style="font-size: 120px; margin-bottom: 10px;">성령 강림 대축일</span>
                 </div>
                 <div style="height: 100px;"></div>
-                <a href="javascript:goTwo()"><img src="1.jpeg" style="width: 100%;"></a>
+                <a href="javascript:goTwo()"><img src="4.jpeg" style="width: 100%;"></a>
+                <div style="height: 50px;"></div>
+                <span style="font-size: 40px;">(그림이나 글씨를 눌러주세요~)</span>
             </div>
             <div class="two"> 
                 <a href="javascript:goThree()">
                 <div style="height: 40px;"></div>
                 <div class="card">
-                    <div style="font-size: 70px;
+                    <div style="font-size: 50px;
                         color: #555555;
                         line-height: 80px;
-                        padding: 42px;">성령 강림 대축일이 되면,성령 칠은 카드를 뽑아 봤던 기억이 한번쯤은 있죠?ㅎ
-                        <br><br> 성령 칠은 카드는 왜 뽑는 걸까요???
+                        padding: 42px;">성령 강림 대축일이 되면,<br>
+성령 칠은 카드를 뽑아봤던 기억이<br>
+한번쯤은 있죠?ㅎ<br><br>
+성령 칠은 카드는<br>
+왜 뽑는 걸까요???
                     </div>
                 </div>
                 <div style="height: 40px;"></div>
@@ -41,15 +46,20 @@
                     line-height: 80px;
                     padding: 42px;">성령 칠은 카드를 뽑는 의미</span><br>
                     <div style="font-size: 70px;
+                    text-align: left;
                     color: #555555;
                     line-height: 90px;
                     padding: 42px;">
                          <div style="height: 70px;"></div>
-                    <span style="font-size: 60px;">- 사도들은 성령의 은총을 풍성히 받고 세상에 파견되었음. </span><br>
+                    <span style="font-size: 50px;">- 사도들은 성령의 은총을
+                     <br>풍성히 받고 세상에 파견되었음.
+                         </span><br>
                     <div style="height: 40px;"></div>
-                    <span style="font-size: 60px;">- 우리도 성령의 은사를 기억하고
-                        특별히 자신이 뽑은 성령의 은사를 삶에 반영해
+                    <span style="font-size: 50px;">- 우리도 성령의 은사를 기억하고<br>
+                        특별히 자신이 뽑은 성령의 은사를<br>
+                        삶에 반영해<br>
                         신앙생활을 풍요롭게 하기 위함.
+                        
                     </div>
                     </a>
                 </span><br>
@@ -69,14 +79,14 @@
                 <div class="card" style="margin-bottom: 50px; text-align: center;">
                     <a href="javascript:goSix()">
                         <div style="height: 100px;"></div>
-                        <span style="font-size: 120px;
+                        <span style="font-size: 90px;
                         color: #555555;
                         line-height: 80px;
                         padding: 42px;">성령칠은</span>
-                    <div style="font-size: 100px;
+                    <div style="font-size: 60px;
                     margin-top: 50px;
                     color: #555555;
-                    line-height: 150px;
+                    line-height: 90px;
                     padding: 42px;">
                     지혜(슬기)<br>
                     깨달음(통달)<br>
@@ -86,6 +96,7 @@
                     효경(받듦)<br>
                     두려움(경외심)
                     </div>
+                        <img src="1.jpeg" style="width: 100%;">
                     </a>
                     <br>
                 </div>
@@ -96,8 +107,14 @@
                 color: #555555;
                 line-height: 150px;
                 padding: 42px;" href="javascript:go()">자~
-                        <br>그럼 이제 성령 칠은 카드를 뽑으러<br> Go!</a>
+                        <br>그럼 이제<br>
+                         성령 칠은 카드를<br>
+                          뽑으러<br> Go!</a>
                 <img class="image" style="width: 100%; margin-bottom: 20px;">
+                <div class="a">
+                <div style="height: 50px;"></div>
+                <span style="font-size: 40px;">(성령 칠은 카드 이미지 저장 후 간직하세요^^)</span>
+            </div>
             </div>
         </div>
 
@@ -130,7 +147,7 @@
       </style>
       <script>
           (function() {
-            let cardNo = localStorage.getItem("c");
+            let cardNo = localStorage.getItem("ca");
             if(cardNo != null) {
                 let card = getCard(cardNo);
                 console.log(card);
@@ -228,6 +245,7 @@
                 $(".four").hide();
                 $(".five").hide();
                 $(".six").fadeIn(300);
+                $(".a").hide();
           }
 
           function go() {
@@ -238,11 +256,13 @@
                 let card = getCard(rand + "");
                 $(".image").attr("src", "1-" + card + ".jpeg")
                 $(".btn").hide();
-                localStorage.setItem("c", rand);
+                localStorage.setItem("ca", rand);
+                $(".a").show();
             } else {
                 let card = getCard(cardNo);
                 $(".image").attr("src", "1-" + card + ".jpeg")
                 $(".btn").hide();
+                $(".a").show();
             }
 
             function getCard(cardNo) {

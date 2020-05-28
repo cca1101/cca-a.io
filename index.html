@@ -150,7 +150,7 @@
       </style>
       <script>
           (function() {
-            let cardNo = localStorage.getItem("car");
+            let cardNo = localStorage.getItem("car1");
             if(cardNo != null) {
                 let card = getCard(cardNo);
                 console.log(card);
@@ -253,13 +253,13 @@
 
           function go() {
              
-            let cardNo = localStorage.getItem("car");
+            let cardNo = localStorage.getItem("car1");
             if(cardNo == null) {
                 let rand = Math.floor(Math.random() * 7);
                 let card = getCard(rand + "");
                 $(".image").attr("src", "1-" + card + ".jpeg")
                 $(".btn").hide();
-                localStorage.setItem("car", rand);
+                localStorage.setItem("car1", rand);
                 $(".a").show();
             } else {
                 let card = getCard(cardNo);

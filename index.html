@@ -39,7 +39,7 @@
             </div>
             <div class="three"> 
                 <div class="card">
-                    <a href="javascript:goFour()">
+                    <a href="javascript:goFive()">
                         <div style="height: 90px;"></div>
                     <span style="font-size: 70px;
                     color: #555555;
@@ -50,17 +50,17 @@
                     color: #555555;
                     line-height: 90px;
                     padding: 42px;">
-                         <div style="height: 70px;"></div>
+                         <div style="height: 120px;"></div>
                     <span style="font-size: 50px;">사도들은 성령의 은총을
                      <br>풍성히 받고 세상에 파견되었음.
                          </span><br>
-                    <div style="height: 60px;"></div>
+                    <div style="height: 100px;"></div>
                     <span style="font-size: 50px;">우리도 성령의 은사를 기억하고<br>
                         특별히 자신이 뽑은 성령의 은사를<br>
                         삶에 반영해<br>
-                        신앙생활을 풍요롭게 하기 위함.
-                        
+                        신앙생활을 풍요롭게 하기 위함.       
                     </div>
+                    <img src="3.png" style="width: 100%;">
                     </a>
                 </span><br>
                 <div style="height: 20px;"></div>
@@ -106,8 +106,8 @@
                 <a class="btn" style="font-size: 65px;
                 color: #555555;
                 line-height: 95px;
-                padding: 42px;" href="javascript:go()">자~
-                        <br>그럼 이제<br>
+                padding: 42px;" href="javascript:go()">
+                        그럼 이제<br>
                          성령 칠은 카드를<br>
                           뽑으러<br> Go!</a>
                 <img class="image" style="width: 100%; margin-bottom: 20px;">
@@ -147,7 +147,7 @@
       </style>
       <script>
           (function() {
-            let cardNo = localStorage.getItem("ca");
+            let cardNo = localStorage.getItem("car");
             if(cardNo != null) {
                 let card = getCard(cardNo);
                 console.log(card);
@@ -250,13 +250,13 @@
 
           function go() {
              
-            let cardNo = localStorage.getItem("c");
+            let cardNo = localStorage.getItem("car");
             if(cardNo == null) {
                 let rand = Math.floor(Math.random() * 7);
                 let card = getCard(rand + "");
                 $(".image").attr("src", "1-" + card + ".jpeg")
                 $(".btn").hide();
-                localStorage.setItem("ca", rand);
+                localStorage.setItem("car", rand);
                 $(".a").show();
             } else {
                 let card = getCard(cardNo);

@@ -10,11 +10,11 @@
     <body>
         <div class="container">
             <div class="one"> 
-                <div style="height: 50px;"></div>
+                <div style="height: 100px;"></div>
                 <div class="title">
-                    <span style="font-size: 80px; margin-bottom: 10px;">성령 강림 대축일</span>
+                    <span style="font-size: 120px; margin-bottom: 10px;">성령 강림 대축일</span>
                 </div>
-                <div style="height: 20px;"></div>
+                <div style="height: 100px;"></div>
                 <a href="javascript:goTwo()"><img src="1.jpeg" style="width: 100%;"></a>
             </div>
             <div class="two"> 
@@ -25,7 +25,7 @@
                         color: #555555;
                         line-height: 80px;
                         padding: 42px;">성령 강림 대축일이 되면,성령 칠은 카드를 뽑아 봤던 기억이 한번쯤은 있죠?ㅎ
-                        <br> 성령 칠은 카드는 왜 뽑는 걸까요???
+                        <br><br> 성령 칠은 카드는 왜 뽑는 걸까요???
                     </div>
                 </div>
                 <div style="height: 40px;"></div>
@@ -35,7 +35,7 @@
             <div class="three"> 
                 <div class="card">
                     <a href="javascript:goFour()">
-                        <div style="height: 40px;"></div>
+                        <div style="height: 90px;"></div>
                     <span style="font-size: 70px;
                     color: #555555;
                     line-height: 80px;
@@ -44,8 +44,9 @@
                     color: #555555;
                     line-height: 90px;
                     padding: 42px;">
-                         <div style="height: 40px;"></div>
+                         <div style="height: 70px;"></div>
                     <span style="font-size: 60px;">- 사도들은 성령의 은총을 풍성히 받고 세상에 파견되었음. </span><br>
+                    <div style="height: 40px;"></div>
                     <span style="font-size: 60px;">- 우리도 성령의 은사를 기억하고
                         특별히 자신이 뽑은 성령의 은사를 삶에 반영해
                         신앙생활을 풍요롭게 하기 위함.
@@ -55,34 +56,47 @@
                 <div style="height: 20px;"></div>
                 </div>
             </div>
-            <div class="four">
+            <div class="four" style="text-align: left;">
                 <a href="javascript:goFive()">
-                <span style="font-size: 70px;
+                    <div style="height: 150px;"></div>
+                <span style="font-size: 100px;
                 color: #555555;
-                line-height: 80px;
-                padding: 42px;">그렇다면 성령 칠은에 대해서 알아볼까요~?^^</span>
+                line-height: 160px;
+                padding: 42px;">&nbsp;그렇다면,<br>&nbsp;성령 칠은에<br>&nbsp;대해서 알아볼까요~?</span>
                 </a>
             </div>
             <div class="five">
-                <div class="card" style="margin-bottom: 50px;">
+                <div class="card" style="margin-bottom: 50px; text-align: center;">
                     <a href="javascript:goSix()">
                         <div style="height: 100px;"></div>
-                    <span style="font-size: 70px;
+                        <span style="font-size: 120px;
+                        color: #555555;
+                        line-height: 80px;
+                        padding: 42px;">성령칠은</span>
+                    <div style="font-size: 100px;
+                    margin-top: 50px;
                     color: #555555;
-                    line-height: 80px;
-                    padding: 42px;">자~
-                        <br>그럼 이제 성령 칠은 카드를 뽑으러 Go!
-                    </span>
+                    line-height: 150px;
+                    padding: 42px;">
+                    지혜(슬기)<br>
+                    깨달음(통달)<br>
+                    의견(일깨움)<br>
+                    지식(앎)<br>
+                    굳셈(용기)<br>
+                    효경(받듦)<br>
+                    두려움(경외심)
+                    </div>
                     </a>
                     <br>
                 </div>
             </div>
             <div class="six">
-                <div style="height: 80px;"></div>
-                <a class="btn" style="font-size: 70px;
+                <div style="height: 250px;"></div>
+                <a class="btn" style="font-size: 120px;
                 color: #555555;
-                line-height: 80px;
-                padding: 42px;" href="javascript:go()">카드 뽑기</a>
+                line-height: 150px;
+                padding: 42px;" href="javascript:go()">자~
+                        <br>그럼 이제 성령 칠은 카드를 뽑으러<br> Go!</a>
                 <img class="image" style="width: 100%; margin-bottom: 20px;">
             </div>
         </div>
@@ -109,13 +123,13 @@
                 width: 30%;
             }
             a:link { color: red; text-decoration: none;}
- a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
+ a:visited { color: #555; text-decoration: none;}
+ a:hover { color: black; text-decoration: underline;}
 
       </style>
       <script>
           (function() {
-            let cardNo = localStorage.getItem("cards");
+            let cardNo = localStorage.getItem("c");
             if(cardNo != null) {
                 let card = getCard(cardNo);
                 console.log(card);
@@ -159,8 +173,10 @@
           })()
 
           function goTwo() {
-                $(".one").hide();
-                $(".two").show();
+                $(".one").fadeOut(300);
+                setTimeout(function() {
+                    $(".two").fadeIn(300);
+                    },300)
                 $(".three").hide();
                 $(".four").hide();
                 $(".five").hide();
@@ -170,8 +186,11 @@
 
           function goThree() {
                 $(".one").hide();
-                $(".two").hide();
-                $(".three").show();
+                $(".two").fadeOut(300);
+                setTimeout(function() {
+                    $(".three").fadeIn(300);
+                    },300)
+
                 $(".four").hide();
                 $(".five").hide();
                 $(".six").hide();
@@ -181,8 +200,11 @@
           function goFour() {
                 $(".one").hide();
                 $(".two").hide();
-                $(".three").hide();
-                $(".four").show();
+                $(".three").fadeOut(300);
+
+                setTimeout(function() {
+                    $(".four").fadeIn(300);
+                    },300)
                 $(".five").hide();
                 $(".six").hide();
           }
@@ -191,8 +213,10 @@
                 $(".one").hide();
                 $(".two").hide();
                 $(".three").hide();
-                $(".four").hide();
-                $(".five").show();
+                $(".four").fadeOut(300);
+                setTimeout(function() {
+                    $(".five").fadeIn(300);
+                    },300)
                 $(".six").hide();
           }
 
@@ -202,18 +226,18 @@
                 $(".three").hide();
                 $(".four").hide();
                 $(".five").hide();
-                $(".six").show();
+                $(".six").fadeIn(300);
           }
 
           function go() {
              
-            let cardNo = localStorage.getItem("cards");
+            let cardNo = localStorage.getItem("c");
             if(cardNo == null) {
                 let rand = Math.floor(Math.random() * 7);
                 let card = getCard(rand + "");
                 $(".image").attr("src", "1-" + card + ".jpeg")
                 $(".btn").hide();
-                localStorage.setItem("cards", "1-" + card + ".jpeg");
+                localStorage.setItem("c", rand);
             } else {
                 let card = getCard(cardNo);
                 $(".image").attr("src", "1-" + card + ".jpeg")
